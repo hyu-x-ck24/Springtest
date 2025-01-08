@@ -3,7 +3,7 @@ FROM openjdk:17-jdk-slim as spring-build
 WORKDIR /spring
 COPY . .
 
-RUN chmod +x ./gradlew
+RUN chmod +x gradlew
 RUN ./gradlew clean build -x test
 
 FROM openjdk:17-jdk-slim as spring-jar
