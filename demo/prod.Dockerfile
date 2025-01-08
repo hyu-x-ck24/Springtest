@@ -1,8 +1,8 @@
 FROM openjdk:17-jdk-slim as spring-build
 
 WORKDIR /spring
-COPY . .
-
+COPY ./demo .
+RUN ls -la
 RUN chmod +x ./gradlew
 RUN ./gradlew clean build -x test
 
